@@ -38,6 +38,7 @@ function ModalE(props) {
 
   return (
     <Modal open={props.open} onClose={close} center={true}>
+      <div className="signdiv">
       <h1>Login</h1>
 
       {isInvalid && (
@@ -65,6 +66,7 @@ function ModalE(props) {
         </div>
         <button>Login</button><button onClick={close}>Cancel</button>
       </form>
+      </div>
     </Modal>
   );
 }

@@ -44,10 +44,29 @@ function App() {
 
     return (
         <div>
-            <h1>Press button or Enter Key</h1>
-            <h2>{discount}</h2>
-            <button onClick={startF}>start</button>
-            <button onClick={stopF}>stop</button>
+            <section class="newsletter">
+
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="news-data">
+                                <div class="section-subheading">
+                                    <h1 class="wow fadeInUp" data-wow-delay="0.3s">Press button or Enter Key</h1>
+                                    <h2>{discount}</h2>
+                                    <span class="input-group-btn">
+                                        <button onClick={startF}>start</button>
+                                        <button onClick={stopF}>stop</button></span>
+                                </div>
+
+                                <div class="input-group wow fadeInUp" data-wow-delay="0.4s">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 }

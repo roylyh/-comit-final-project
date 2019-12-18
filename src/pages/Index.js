@@ -1,48 +1,40 @@
 import React from 'react';
 import {
-    Link
+  Link
 } from 'react-router-dom';
 import ModalVideo from 'react-modal-video';
 import '../css/modal-video.scss';
+import sample from "../thermomix.mp4";
 
 
-function Index () {
-    let [isOpen, setIsOpen] = React.useState(false);
+function Index() {
+  let [isOpen, setIsOpen] = React.useState(false);
 
-    function closeV() {
-      setIsOpen(false);
-    }
-    
-    function openModal() {
-      setIsOpen(true);
-    }
+  function closeV() {
+    setIsOpen(false);
+  }
 
-    return (
-        <div>
-            <section id="banner">
-	            <div className="inner">
-		            <h1>Thermomix: <span>Homemade + made effortless<br /></span></h1>
-		            <p><span className="inner-span">Thermomix® does the work so you can make time for what matters most</span></p>
-		            <ul className="actions">
-                        <ModalVideo channel='youtube' isOpen={isOpen} videoId='kZGYuOSVJ2k' onClose={closeV} />
-                        <button onClick={openModal}>Video</button>
-		            </ul>
-	            </div>
-            </section>
+  function openModal() {
+    setIsOpen(true);
+  }
 
-            <section id="one">
-	            <div className="inner">
-		            <header>
-			            <h2>Create magic moments</h2>
-		            </header>
-		            <p>The Thermomix® is a kitchen appliance made by the Vorwerk Corporate Group.</p>
-		            <ul className="actions">
-                        <button><Link to='/intro'></Link>Learn More</button>
-		            </ul>
-	            </div>
-            </section>
-        </div>
-    )
+  return (
+    <div>
+      <div className="video-container">
+        <video className="video1" playsInline autoPlay muted loop id="bgvid">
+          <source src={sample} type="video/mp4" />
+        </video>
+      </div>
+
+      <div className="header">
+        <h1>Thermomix® does the work so you can make time for what matters most</h1>
+        <ul className="actions">
+          <ModalVideo channel='youtube' isOpen={isOpen} videoId='kZGYuOSVJ2k' onClose={closeV} />
+          <button className='btn1' onClick={openModal}>Video</button>
+        </ul>
+      </div>
+    </div>
+  )
 }
 
 export default Index;
