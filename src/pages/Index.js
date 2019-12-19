@@ -21,7 +21,7 @@ function Index() {
   return (
     <div>
       <div className="video-container">
-        <video className="video1" playsInline autoPlay muted loop id="bgvid">
+        <video className="video" playsInline autoPlay muted loop id="bgvid">
           <source src={sample} type="video/mp4" />
         </video>
       </div>

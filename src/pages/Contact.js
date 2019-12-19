@@ -10,7 +10,7 @@ function Contact() {
 
                     <div className="row">
                         <div className="col-md-2"></div>
-                        <div className="col-md-2 section-index wow fadeInUp" data-wow-delay="0.3s">CONTANCT US</div>
+                        <div className="col-md-2 section-index wow fadeInUp" data-wow-delay="0.3s">CONTACT US</div>
 
                         <div className="col-md-8 section-heading wow fadeInUp" data-wow-delay="0.4s"></div>
                     </div>

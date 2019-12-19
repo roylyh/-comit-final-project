@@ -49,6 +49,12 @@
 
 .btn1 {
       color: antiquewhite;
+      background: none;
+      border: .3pt solid rgba(184, 140, 93, 0.7);
+      text-transform: uppercase !important;
+      font-size: 12px !important;
+      letter-spacing: 2px;
+      padding: 18px 36px;
 }
 
 @media(max-width: 900px) {
@@ -162,8 +168,10 @@
       background: #0f0f0f;
       width: 100%;
       height: 100%;
-      visibility: hidden;
-      opacity: 0;
+      /* visibility: hidden; */
+      visibility: visible;
+      /* opacity: 0; */
+      opacity: 1;
       transition: all 1s ease-out;
 }
 
@@ -276,15 +284,6 @@ section {
       margin: 40px 0;
 }
 
-button:not(.modal-video-close-btn, .styles_closeButton__20ID4) {
-      background: none;
-      border: .3pt solid rgba(184, 140, 93, 0.7);
-      text-transform: uppercase !important;
-      font-size: 12px !important;
-      letter-spacing: 2px;
-      padding: 18px 36px;
-}
-
 /*--------------- services section starts  --------------- */
 
 .services {
@@ -386,13 +385,12 @@ button:not(.modal-video-close-btn, .styles_closeButton__20ID4) {
 
 .newsletter button {
       font-size: 25px; 
-      background-color:; 
       color:grey; 
       border-radius: 10px; 
       width: 120px; 
       height: 50px; 
       cursor: pointer; 
-margin: 20px;
+      margin: 20px;
 }
 
 

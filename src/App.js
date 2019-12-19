@@ -17,13 +17,24 @@ import './css/style.css';
 function App() {
   let [signboo, setSignboo] = React.useState(true);
   let [open, setOpen] = React.useState(false);
+  let [menuon, setMenuon] = React.useState(false);
 
   function signOut() {
     setSignboo(true);
+    setMenuon(false);
   }
 
   function signIn() {
     setOpen(true);
+    setMenuon(false);
+  }
+
+  function menucontrol() {
+    setMenuon(!menuon);
+  }
+
+  function menucon() {
+    setMenuon(false);
   }
 
   return (
@@ -48,23 +59,23 @@ function App() {
               </ul>
 
               <div id="toggle">
-                <div className="span">menu</div>
+                <div className="span" onClick={menucontrol}>menu</div>
               </div>
             </nav>
 
-            <div id="resize">
-              <div className="close-btn">close</div>
+            {menuon && <div id="resize">
+              <div className="close-btn" onClick={menucon}>close</div>
               <ul id="menu">
-                <li><a><Link to='/'>Home</Link></a></li>
-                <li><a><Link to='/intro'>Introduction</Link></a></li>
-                <li><a><Link to='/recipes'>Recipes</Link></a></li>
-                <li><a><Link to='/contact'>Contact</Link></a></li>
-                <li><a><Link to='/discount'>Discount</Link></a></li>
+                <li onClick={menucon}><a><Link to='/'>Home</Link></a></li>
+                <li onClick={menucon}><a><Link to='/intro'>Introduction</Link></a></li>
+                <li onClick={menucon}><a><Link to='/recipes'>Recipes</Link></a></li>
+                <li onClick={menucon}><a><Link to='/contact'>Contact</Link></a></li>
+                <li onClick={menucon}><a><Link to='/discount'>Discount</Link></a></li>
                 {signboo && <li><a onClick={signIn}><Link to='/sign'>Sign in</Link></a></li>}
                 {!signboo && <li><a onClick={signOut}><Link to='/sign'>Sign out</Link></a></li>}
                 <Sign setOpen={setOpen} open={open} setSignboo={setSignboo}></Sign>
               </ul>
-            </div>
+            </div>}
 
 
           </div>
